@@ -1,0 +1,29 @@
+server:
+  port: 8999
+  contextPath : /kafka
+spring:
+  application:
+    name: kafka
+  kafka:
+    bootstrapServers: xxxxx:xxxx   # kafka的ip和端口
+    consumer:
+      groupId: xxxx   # 分组id
+      topic: xxxx     # kafka的topic
+      keyDeserializer: org.apache.kafka.common.serialization.StringDeserializer
+      valueDserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      groupId: xxxx   # 分组id
+      topic: xxxx     # kafka的topic
+      keyDeserializer: org.apache.kafka.common.serialization.StringSerializer
+      valueDserializer: org.apache.kafka.common.serialization.StringSerializer
+
+
+data:
+  list:
+    deviceId: 10010001031401000019,10010001031401000020,10010001031401000025,10010001031401000018,10010001031401000017,10010001031401000021,10010001031401000024
+    plateNo: 云H12340,京F12341,吉D12344,00000000,新D12342,00000000,沪G12340,00000000,浙F12346,湘FT0H69
+    # 车道集合
+    laneId: 1
+  time:
+    # 间隔时间
+    interval: 10
